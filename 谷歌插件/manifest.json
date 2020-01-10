@@ -1,0 +1,22 @@
+﻿{
+    "manifest_version": 2,
+    "name": "TL",
+    "version": "1.0",
+    "description": "天龙八部畅易阁抢号",
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts":[
+        {
+            "matches": ["http://tl.cyg.changyou.com/goods/char_detail*"],
+            "js": [
+                "js/jquery.js",
+                "js/run.js"
+            ],
+            "run_at":"document_end"
+        }
+    ],
+    "permissions": [
+        "tabs","http://*/*","https://*/*"
+    ]
+}
